@@ -1,0 +1,92 @@
+:root{
+    --salmon: #EF9D71;
+    --black: #000;
+    --white: #fff;
+    --cyan: #AEDEE0;
+    --dsalmon: #2c1613;
+    --dcyan: #111212;
+}
+
+@font-face {
+    font-family: machina;
+    src: url(./NeueMachina-Regular.ttf);
+}
+
+body{
+    transition: background-color ease-in-out .5s;
+}
+
+*::selection{
+    background-color: transparent;
+    color: var(--white);
+}
+
+.vdodiv{
+    clip-path: circle(var(--clip) at 50% 50%)
+}
+
+body[theme = "black"]{
+    background-color: var(--black);
+}
+body[theme = "black"]{
+    *::selection{
+        background-color: transparent;
+        color: var(--salmon);
+    }
+}
+body[theme = "black"] .section {
+    color: var(--white);
+}
+
+
+body[theme = "cyan"]{
+    background-color: var(--cyan);
+}
+body[theme = "cyan"] .section{
+    color: var(--dcyan);
+}
+
+
+body[theme = "salmon"]{
+    background-color: var(--salmon);
+}
+body[theme = "salmon"].section{
+    color: var(--dsalmon);
+}
+
+
+body[theme = "white"]{
+    *::selection{
+        background-color: transparent;
+        color: var(--salmon);
+    }
+}
+body[theme = "white"]{
+    background-color: var(--white);
+}
+body[theme = "white"].section{
+    color: var(--black);
+}
+
+
+.machina{
+    font-family: machina;
+    font-weight: 900;
+}
+
+.machina-light{
+    font-family: machina;
+    font-weight: 300;
+}
+
+.heading{
+    width: 20em;
+}
+
+.btmtxt{
+    width: 12em;
+}
+
+.sys-ui{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
